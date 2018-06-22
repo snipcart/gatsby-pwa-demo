@@ -1,0 +1,24 @@
+engines:
+  eslint:
+    enabled: true
+  stylelint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+          mass_threshold: 70
+
+ratings:
+   paths:
+    - "**.js"
+    - "**.jsx"
+    - "**.css"
+    - "**.less"
+    - "**.scss"
+    - "**.sss"
+
+exclude_paths:
+- static/**/*
+- src/templates/b16-tomorrow-dark.css
