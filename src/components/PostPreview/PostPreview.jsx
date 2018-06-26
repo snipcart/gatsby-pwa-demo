@@ -39,18 +39,17 @@ class PostPreview extends Component {
     const { mobile } = this.state;
     const expand = mobile;
     /* eslint no-undef: "off" */
+    const coverUrl = postInfo.cover.publicURL;
     const cover =
-      postInfo.cover.substring(0, 1) === "/"
-        ? __PATH_PREFIX__ + postInfo.cover
-        : postInfo.cover;
-    const coverHeight = mobile ? 162 : 225;
+      coverUrl.substring(0, 1) === "/"
+        ? __PATH_PREFIX__ + coverUrl
+        : coverUrl;
     return (
       <Card key={postInfo.path} raise className="md-grid md-cell md-cell--12">
         <Link style={{ textDecoration: "none" }} to={postInfo.path}>
           <Media
             style={{
-              backgroundImage: `url(${cover})`,
-              height: `${coverHeight}px`
+              backgroundImage: `url(${cover})`
             }}
             className="post-preview-cover"
           >

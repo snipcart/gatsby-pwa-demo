@@ -2,13 +2,9 @@ import React from "react";
 import Helmet from "react-helmet";
 import Card from "react-md/lib/Cards";
 import CardText from "react-md/lib/Cards/CardText";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
 import PostCover from "../components/PostCover/PostCover";
 import PostInfo from "../components/PostInfo/PostInfo";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import PostSuggestions from "../components/PostSuggestions/PostSuggestions";
+import ProductListing from "../components/ProductListing/ProductListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
@@ -69,24 +65,9 @@ export default class PostTemplate extends React.Component {
               <PostInfo postNode={postNode} />
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </CardText>
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-              <SocialLinks
-                postPath={slug}
-                postNode={postNode}
-                mobile={this.state.mobile}
-              />
-            </div>
           </Card>
-          <UserInfo
-            className="md-grid md-cell md-cell--12"
-            config={config}
-            expanded={expanded}
-          />
-          <Disqus postNode={postNode} expanded={expanded} />
+          <ProductListing products={post.products} />
         </div>
-
-        <PostSuggestions postNode={postNode} />
       </div>
     );
   }
@@ -101,16 +82,20 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        cover
         date
-        category
-        tags
+        cover {
+          publicURL
+        }
+        products {
+          sku
+          name
+          price
+          image {
+            publicURL
+          }
+        }
       }
       fields {
-        nextTitle
-        nextSlug
-        prevTitle
-        prevSlug
         slug
       }
     }

@@ -6,11 +6,12 @@ class PostCover extends Component {
     const { postNode, mobile } = this.props;
     const post = postNode.frontmatter;
     /* eslint no-undef: "off" */
+    const coverUrl = post.cover.publicURL;
     const cover =
-      post.cover.substring(0, 1) === "/"
-        ? __PATH_PREFIX__ + post.cover
-        : post.cover;
-    const coverHeight = mobile ? 180 : 350;
+      coverUrl.substring(0, 1) === "/"
+        ? __PATH_PREFIX__ + coverUrl
+        : coverUrl;
+    const coverHeight = mobile ? 180 : 400;
     return (
       <div
         style={{ backgroundImage: `url(${cover})`, height: `${coverHeight}px` }}

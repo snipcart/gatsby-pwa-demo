@@ -1,0 +1,15 @@
+.products-list {
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+
+        flex: 1 1;
+    }
+    h3, p {
+        text-align: center;
+    }
+}

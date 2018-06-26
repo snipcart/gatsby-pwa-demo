@@ -55,6 +55,11 @@ $phone-status-bar-height: 24px - 12px;
         .post-body {
             max-width: 100%;
 
+            img {
+                max-height: 200px;
+                float: left;
+            }
+
             > h1,
             > h2,
             > h3,

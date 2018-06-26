@@ -25,7 +25,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/${config.blogPostDir}`
+        path: `${__dirname}/content`
       }
     },
     {
@@ -45,12 +45,6 @@ module.exports = {
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-autolink-headers"
         ]
-      }
-    },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: config.siteGATrackingID
       }
     },
     {
@@ -146,7 +140,6 @@ module.exports = {
             serialize(ctx) {
               const { rssMetadata } = ctx.query.site.siteMetadata;
               return ctx.query.allMarkdownRemark.edges.map(edge => ({
-                categories: edge.node.frontmatter.tags,
                 date: edge.node.frontmatter.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.excerpt,
@@ -170,10 +163,7 @@ module.exports = {
                     fields { slug }
                     frontmatter {
                       title
-                      cover
                       date
-                      category
-                      tags
                     }
                   }
                 }
