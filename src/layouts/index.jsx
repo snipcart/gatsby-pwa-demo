@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation/Navigation";
 import config from "../../data/SiteConfig";
 import "./index.scss";
 import "./global.scss";
+import Snipcart from "../components/Snipcart/Snipcart";
 
 export default class MainLayout extends React.Component {
   getLocalTitle() {
@@ -43,8 +44,9 @@ export default class MainLayout extends React.Component {
   }
   render() {
     const { children } = this.props;
-    return (
-      <Navigation config={config} LocalTitle={this.getLocalTitle()}>
+    return [
+      <Snipcart key="snipcartComponent" apiKey={config.snipcartApiKey} />,
+      <Navigation key="navComponent" config={config} LocalTitle={this.getLocalTitle()}>
         <div>
           <Helmet>
             <meta name="description" content={config.siteDescription} />
@@ -52,6 +54,6 @@ export default class MainLayout extends React.Component {
           {children()}
         </div>
       </Navigation>
-    );
+    ];
   }
 }

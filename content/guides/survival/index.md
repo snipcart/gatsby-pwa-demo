@@ -1,6 +1,6 @@
 ---
 title: "Preparing for the apocalypse"
-cover: "./arm.svg"
+cover: "./flesh-eating.svg"
 date: "01/01/2017"
 products:
     -

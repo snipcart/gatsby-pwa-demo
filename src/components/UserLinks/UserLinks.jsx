@@ -13,6 +13,7 @@ class UserLinks extends Component {
         secondary
         key={link.label}
         iconClassName={link.iconClassName}
+        className={link.className || ""}
         href={link.url}
       >
         {labeled ? link.label : ""}
