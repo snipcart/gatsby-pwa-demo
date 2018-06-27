@@ -108,7 +108,12 @@ module.exports = {
         ]
       }
     },
-    "gatsby-plugin-offline",
+    {
+      resolve: "offline-with-worker",
+      options: {
+        workerScript: "./src/worker.js",
+      }
+    },
     {
       resolve: "gatsby-plugin-feed",
       options: {

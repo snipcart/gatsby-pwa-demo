@@ -103,7 +103,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         result.data.allMarkdownRemark.edges.forEach(edge => {
-          console.log('create page', edge.node.fields.slug);
           createPage({
             path: edge.node.fields.slug,
             component: postPage,
