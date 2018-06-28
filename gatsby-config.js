@@ -13,7 +13,7 @@ module.exports = {
       feed_url: config.siteUrl + pathPrefix + config.siteRss,
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
+      image_url: `${config.siteUrl + pathPrefix}/logos/logo.svg`,
       author: config.userName,
       copyright: config.copyright
     }
@@ -91,19 +91,18 @@ module.exports = {
         short_name: config.siteTitle,
         description: config.siteDescription,
         start_url: config.pathPrefix,
-        background_color: "#e0e0e0",
-        theme_color: "#c62828",
-        display: "minimal-ui",
+        background_color: "#F5E35C",
+        theme_color: "#bdbdbd",
+        display: "standalone",
         icons: [
           {
-            src: "/logos/logo-192.png",
+            src: "/logos/logo.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/logos/logo-512.png",
-            sizes: "512x512",
-            type: "image/png"
+            src: "/logos/logo.svg",
+            sizes: "72x72 96x96 128x128 256x256"
           }
         ]
       }

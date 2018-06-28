@@ -8,6 +8,21 @@ products:
      name: "Wood planks"
      price: "25"
      image: "./planks.svg"
+    -
+     sku: "zomb-arm"
+     name: "Bait"
+     price: "12"
+     image: "./arm.svg"
+    -
+     sku: "zomb-med-kit"
+     name: "Med Kit"
+     price: "32"
+     image: "./med-kit.svg"
+    -
+     sku: "zomb-tools"
+     name: "Tools"
+     price: "47"
+     image: "./tools.svg"
 ---
 # Preparing for the apocalypse
 

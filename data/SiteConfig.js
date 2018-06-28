@@ -2,7 +2,7 @@ module.exports = {
   blogPostDir: "guides", // The name of directory that contains your posts.
   siteTitle: "Snipcart's Zombie survival using GatsbyJS", // Site title.
   siteTitleAlt: "GatsbyJS Progressive Web App for e-commerce Demo", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteLogo: "/logos/logo.svg", // Logo used for SEO and manifest.
   siteUrl: "https://vagr9k.github.io", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
