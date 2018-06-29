@@ -1,2 +1,2 @@
-!function(e){function t(o){if(r[o])return r[o].exports;var u=r[o]={exports:{},id:o,loaded:!1};return e[o].call(u.exports,u,u.exports,t),u.loaded=!0,u.exports}var r={};return t.m=e,t.c=r,t.p="/",t(0)}([function(e,t){"use strict";t.__esModule=!0,t.default={},e.exports=t.default}]);
+!function(e){function t(o){if(r[o])return r[o].exports;var s=r[o]={exports:{},id:o,loaded:!1};return e[o].call(s.exports,s,s.exports,t),s.loaded=!0,s.exports}var r={};return t.m=e,t.c=r,t.p="/gatsby-pwa-demo/",t(0)}([function(e,t){"use strict";t.__esModule=!0,t.default={},e.exports=t.default}]);
 //# sourceMappingURL=worker-b3f61f772f3d807dd60a.js.map
