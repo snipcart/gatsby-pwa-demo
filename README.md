@@ -1,3 +1,13 @@
+# A PWA Example: Build an E-Commerce Progressive Web App with Gatsby
+
+![pwa-ecommerce-gatsby](https://snipcart.com/media/203675/pwa-example-ecommerce-live-demo.png)
+
+> [Read full tutorial](https://snipcart.com/blog/pwa-example-ecommerce-gatsby)
+
+> [See live demo](https://snipcart.github.io/gatsby-pwa-demo/)
+
+***
+
 [![Code Climate](https://codeclimate.com/github/Vagr9K/gatsby-material-starter/badges/gpa.svg)](https://codeclimate.com/github/Vagr9K/gatsby-material-starter)
 [![Issue Count](https://codeclimate.com/github/Vagr9K/gatsby-material-starter/badges/issue_count.svg)](https://codeclimate.com/github/Vagr9K/gatsby-material-starter)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820)](https://www.codacy.com/app/Vagr9K/gatsby-material-starter?utm_source=github.com&utm_medium=referral&utm_content=Vagr9K/gatsby-material-starter&utm_campaign=Badge_Grade)
