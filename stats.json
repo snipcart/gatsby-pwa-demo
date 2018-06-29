@@ -1,0 +1,64 @@
+{
+  "assetsByChunkName": {
+    "path---all-about-weapons": [
+      "path---all-about-weapons-0165ccf953e86ce229e7.js",
+      "path---all-about-weapons-0165ccf953e86ce229e7.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-layouts-index-jsx": [
+      "component---src-layouts-index-jsx-f8bac75302c54881eb48.js",
+      "component---src-layouts-index-jsx-f8bac75302c54881eb48.js.map"
+    ],
+    "path---preparing-for-the-apocalypse": [
+      "path---preparing-for-the-apocalypse-b8a1f47f367886234d5c.js",
+      "path---preparing-for-the-apocalypse-b8a1f47f367886234d5c.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "path---index": [
+      "path---index-72a3539c4707ba0de4f2.js",
+      "path---index-72a3539c4707ba0de4f2.js.map"
+    ],
+    "component---src-pages-about-jsx": [
+      "component---src-pages-about-jsx-51395fd6fde72dcbab96.js",
+      "component---src-pages-about-jsx-51395fd6fde72dcbab96.js.map"
+    ],
+    "commons": [
+      "commons-79a167b6608d1afa1edc.js",
+      "build-js-styles.css",
+      "commons-79a167b6608d1afa1edc.js.map",
+      "build-js-styles.css.map"
+    ],
+    "worker": [
+      "worker-b3f61f772f3d807dd60a.js",
+      "worker-b3f61f772f3d807dd60a.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-templates-post-jsx": [
+      "component---src-templates-post-jsx-64dfb41653e5d44bc2c2.js",
+      "component---src-templates-post-jsx-64dfb41653e5d44bc2c2.js.map"
+    ],
+    "component---src-pages-index-jsx": [
+      "component---src-pages-index-jsx-327ff1125598b21b4fd5.js",
+      "component---src-pages-index-jsx-327ff1125598b21b4fd5.js.map"
+    ],
+    "app": [
+      "app-87a93b7c30884adff515.js",
+      "build-js-styles.css",
+      "app-87a93b7c30884adff515.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
