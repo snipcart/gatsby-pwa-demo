@@ -66,7 +66,7 @@ export default class PostTemplate extends React.Component {
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </CardText>
           </Card>
-          <ProductListing products={post.products} />
+          <ProductListing products={post.products} path={slug} />
         </div>
       </div>
     );

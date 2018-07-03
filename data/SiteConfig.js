@@ -1,10 +1,10 @@
 module.exports = {
   blogPostDir: "guides", // The name of directory that contains your posts.
-  siteTitle: "Snipcart's Zombie survival using GatsbyJS", // Site title.
+  siteTitle: "Snipcart's Zombie\xa0survival using\xa0GatsbyJS", // Site title.
   siteTitleAlt: "GatsbyJS Progressive Web App for e-commerce Demo", // Alternative site title for SEO.
   siteLogo: "/logos/logo.svg", // Logo used for SEO and manifest.
-  siteUrl: "https://vagr9k.github.io", // Domain of your website without pathPrefix.
-  pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+  siteUrl: "https://snipcart.github.io", // Domain of your website without pathPrefix.
+  pathPrefix: "/gatsby-pwa-demo/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: "A demo Progressive Web App with GatsbyJS and Snipcart",
   siteRss: "/rss.xml", // Path to the RSS file.
@@ -20,11 +20,12 @@ module.exports = {
   userLinks: [
     {
       label: "Your Cart",
-      iconClassName: "fa fa-shopping-cart"
+      iconClassName: "fa fa-shopping-cart",
+      className: "snipcart-checkout"
     },
     {
       label: "GitHub",
-      url: "https://github.com/snipcart/",
+      url: "https://github.com/snipcart/gatsby-pwa-demo",
       iconClassName: "fa fa-github"
     },
     {
@@ -32,6 +33,5 @@ module.exports = {
       url: "https://twitter.com/Snipcart",
       iconClassName: "fa fa-twitter"
     }
-  ],
-  copyright: "Made with <3 by Snipcart" // Copyright string for the footer of the website and RSS feed.
+  ]
 };

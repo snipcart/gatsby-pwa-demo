@@ -6,7 +6,6 @@ class Snipcart extends Component {
         this.isSnipcartReady = false;
         this.cssLoading = false;
         this.cssLoaded = false;
-        this.scriptLoading = null;
         this.eventSubscribed = false;
 
         this.updateScripts = this.updateScripts.bind(this);

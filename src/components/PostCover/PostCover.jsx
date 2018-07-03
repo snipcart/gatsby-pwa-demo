@@ -7,14 +7,10 @@ class PostCover extends Component {
     const post = postNode.frontmatter;
     /* eslint no-undef: "off" */
     const coverUrl = post.cover.publicURL;
-    const cover =
-      coverUrl.substring(0, 1) === "/"
-        ? __PATH_PREFIX__ + coverUrl
-        : coverUrl;
     const coverHeight = mobile ? 180 : 400;
     return (
       <div
-        style={{ backgroundImage: `url(${cover})`, height: `${coverHeight}px` }}
+        style={{ backgroundImage: `url(${post.cover.publicURL})`, height: `${coverHeight}px` }}
         className="md-grid md-cell--9 post-cover"
       />
     );

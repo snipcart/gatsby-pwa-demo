@@ -8,6 +8,7 @@ import FontIcon from "react-md/lib/FontIcons";
 import Link from "gatsby-link";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 import PostTags from "../PostTags/PostTags";
+import ProductListing from "../ProductListing/ProductListing";
 import "./PostPreview.scss";
 
 class PostPreview extends Component {
@@ -39,17 +40,12 @@ class PostPreview extends Component {
     const { mobile } = this.state;
     const expand = mobile;
     /* eslint no-undef: "off" */
-    const coverUrl = postInfo.cover.publicURL;
-    const cover =
-      coverUrl.substring(0, 1) === "/"
-        ? __PATH_PREFIX__ + coverUrl
-        : coverUrl;
-    return (
+    return [
       <Card key={postInfo.path} raise className="md-grid md-cell md-cell--12">
         <Link style={{ textDecoration: "none" }} to={postInfo.path}>
           <Media
             style={{
-              backgroundImage: `url(${cover})`
+              backgroundImage: `url(${postInfo.cover.publicURL})`
             }}
             className="post-preview-cover"
           >
@@ -73,8 +69,10 @@ class PostPreview extends Component {
           {postInfo.excerpt}
           <PostTags tags={postInfo.tags} />
         </CardText>
-      </Card>
-    );
+
+      </Card>,
+      <ProductListing key={postInfo.path+"_products"} products={postInfo.products} path={postInfo.path} />
+    ];
   }
 }
 

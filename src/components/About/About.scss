@@ -4,10 +4,7 @@
     align-items: center;
 
     .about-img {
-        border-radius: 50%;
-        width: 300px;
-        height: 300px;
-        margin: 10px 0;
+        max-width: 100%;
 
         @media (max-width: 360px - 1px) {
             padding: 20px;

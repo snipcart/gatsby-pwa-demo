@@ -18,16 +18,12 @@ class Footer extends Component {
         {userLinks ? <UserLinks config={config} labeled /> : null}
         <div className="notice-container">
           <div className="copyright">
-            <h4>{copyright}</h4>
+            <h4>
+              Made with &lt;3 by 
+              <a href="https://snipcart.com/">Snipcart</a>
+            </h4>
           </div>
 
-          <div className="rss">
-            <Link to={url}>
-              <Button flat secondary iconClassName="fa fa-rss">
-                Subscribe
-              </Button>
-            </Link>
-          </div>
           <div className="based-on">
             <h4>
               Based on{" "}

@@ -38,9 +38,17 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             title
-            date
+            date(formatString: "MMMM DD, YYYY")
             cover {
               publicURL
+            }
+            products {
+              sku
+              name
+              price
+              image {
+                publicURL
+              }
             }
           }
         }
