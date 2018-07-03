@@ -14,8 +14,7 @@ module.exports = {
       title: config.siteTitle,
       description: config.siteDescription,
       image_url: `${config.siteUrl + pathPrefix}/logos/logo.svg`,
-      author: config.userName,
-      copyright: config.copyright
+      author: config.userName
     }
   },
   plugins: [
@@ -134,7 +133,6 @@ module.exports = {
                 description
                 image_url
                 author
-                copyright
               }
             }
           }
