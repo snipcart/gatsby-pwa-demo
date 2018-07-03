@@ -9,17 +9,14 @@ class Footer extends Component {
   render() {
     const url = config.siteRss;
     const { userLinks } = this.props;
-    const { copyright, fixedFooter }  = config;
-    if (!copyright) {
-      return null;
-    }
+    const { fixedFooter }  = config;
     return (
       <footer className={fixedFooter ? "footer footer-fixed" : "footer"}>
         {userLinks ? <UserLinks config={config} labeled /> : null}
         <div className="notice-container">
           <div className="copyright">
             <h4>
-              Made with &lt;3 by 
+              Made with &lt;3 by {" "}
               <a href="https://snipcart.com/">Snipcart</a>
             </h4>
           </div>

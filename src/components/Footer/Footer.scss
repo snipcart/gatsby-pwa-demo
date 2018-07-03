@@ -6,6 +6,11 @@
     background-color: $md-primary-color;
     padding: 10px 5px 5px;
 
+    a, a:link {
+        color: inherit;
+        text-decoration: underline;
+    }
+
     .notice-container {
         display: flex;
         align-content: center;
