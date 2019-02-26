@@ -19,6 +19,8 @@ Covering:
 
 > [See live demo](https://snipcart.github.io/gatsby-pwa-demo/)
 
+Enjoy folks!
+
 ***
 
 This demo is based on [Gatsby's Material Starter](https://github.com/Vagr9K/gatsby-material-starter).
