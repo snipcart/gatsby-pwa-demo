@@ -1,0 +1,26 @@
+html, body, #___gatsby, #___gatsby > div, .main {
+    height: 100%;
+}
+
+main {
+    flex: 1 1 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.markdown img {
+    height: 175px;
+    margin: 15px;
+    float: left;
+}
+
+footer > div {
+    background-size: contain;
+}
+
+footer p {
+    margin: 15px;
+}
