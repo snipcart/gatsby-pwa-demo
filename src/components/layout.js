@@ -1,4 +1,4 @@
-import "./layout.css"
+import "./layout.scss"
 
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
