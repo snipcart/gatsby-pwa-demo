@@ -28,10 +28,22 @@
         display: flex;
         flex: 1 1 100%;
     }
+    
+    @media screen and (max-width: 420px) {
+        padding: 45px 0;
+
+        h2 {
+            font-size: 40px;
+        }
+    }
 }
 
 .reviews-list {
     display: flex;
+
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
+    }
 }
 
 .review-name {

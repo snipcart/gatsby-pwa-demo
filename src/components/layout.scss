@@ -1,5 +1,9 @@
 @import "./colors.scss";
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: $dark-bg;
     color: $text-main;
@@ -26,8 +30,12 @@ body {
         font-family: "Centenario v0.1";
         font-size: 136px;
         line-height: 92.9%;
+
+        box-sizing: border-box;
+        padding: 0 20px;
         margin: 36px auto;
         width: 726px;
+        max-width: 100%;
         /* or 126px */
 
         text-align: center;
@@ -41,6 +49,7 @@ body {
 
     .bio {
         width: 464px;
+        max-width: 100%;
         font-size: 24px;
         line-height: 135.3%;
         margin: 36px auto;
@@ -48,6 +57,27 @@ body {
 
         text-align: center;
         letter-spacing: 0.03em;
+    }
+
+
+    @media screen and (max-width: 420px) {
+        padding: 44px 0 80px 0;
+
+        h1 {
+            font-size: 54px;
+            margin: 26px auto;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin: 26px auto;
+        }
+
+        .bio {
+            margin: 26px auto;
+            font-size: 18px;
+            padding: 0 20px;
+        }
     }
 }
 
@@ -88,10 +118,15 @@ a {
 }
 
 footer {
-    margin: 110px;
+    margin: 110px auto;
     text-align: center;
+    max-width: 100%;
 
     & > div {
         background-size: contain;
+    }
+
+    @media screen and (max-width: 420px) {
+        margin: 50px auto;
     }
 }

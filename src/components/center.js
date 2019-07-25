@@ -7,9 +7,11 @@ class Center extends React.Component {
         return (
             <div className={className} style={{
                 ...style,
-                marginLeft: `auto`,
-                marginRight: `auto`,
-                maxWidth: rhythm(34),
+                margin: `0 auto`,
+                width: rhythm(34),
+                maxWidth: `100%`,
+                boxSizing: `border-box`,
+                padding: `0 20px`,
             }}>
                 {children}
             </div>
