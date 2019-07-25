@@ -46,6 +46,11 @@
 
         letter-spacing: -0.04em;
         text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 1px 0 0 currentColor;
+        }
     }
     
     .product-name {
