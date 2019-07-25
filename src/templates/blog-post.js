@@ -40,7 +40,7 @@ class BlogPostTemplate extends React.Component {
             {post.frontmatter.date}
           </p>
           <div class="markdown" dangerouslySetInnerHTML={{ __html: post.html }} />
-          <Products products={post.frontmatter.products} />
+          <Products products={post.frontmatter.products || []} />
           <hr
             style={{
               marginBottom: rhythm(1),
