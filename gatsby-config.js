@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby PWA Survival Guide`,
+    title: `Gatsby PWA Survival Store`,
     author: `Charles Ouellet`,
     description: `A simple blog demonstrating how Gatsby PWA can save you`,
     snipcartApiKey: process.env.SNIPCART_API_KEY,
