@@ -4,10 +4,11 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Center from "../components/center"
 import Layout from "../components/layout"
+import Products from "../components/products"
 import SEO from "../components/seo"
 import Reviews from "../components/reviews"
-import Center from "../components/center";
 
 class BlogIndex extends React.Component {
   render() {
@@ -22,7 +23,7 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article className="post">
+            <article key={node.id} className="post">
               <div className="post-aside">
                 <small>{node.frontmatter.date}</small>
                 <h3 className="post-title">
@@ -34,7 +35,8 @@ class BlogIndex extends React.Component {
                     __html: node.excerpt,
                   }}
                 />
-                </div>
+              </div>
+              <Products products={node.frontmatter.products} />
             </article>
           )
         })}
@@ -60,6 +62,7 @@ export const pageQuery = graphql`
       ) {
       edges {
         node {
+          id
           excerpt
           fields {
             slug
