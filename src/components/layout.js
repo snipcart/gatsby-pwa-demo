@@ -60,7 +60,7 @@ class Layout extends React.Component {
           }
         `
       } render={ data => (
-      <div class="main">
+      <div className="main">
         <Helmet>
           <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap" rel="stylesheet" />
         </Helmet>

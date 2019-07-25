@@ -6,7 +6,7 @@ module.exports = {
     author: `Charles Ouellet`,
     description: `A simple blog demonstrating how Gatsby PWA can save you`,
     snipcartApiKey: process.env.SNIPCART_API_KEY,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://snipcart-gatsby-pwa.netlify.com/`,
   },
   plugins: [
     {
