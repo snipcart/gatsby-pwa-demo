@@ -1,8 +1,12 @@
+import "./blog-post.scss"
+
 import React from "react"
 import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Center from "../components/center"
 import Layout from "../components/layout"
+import Products from "../components/products"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
@@ -17,30 +21,33 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1
-          style={{
-            marginTop: rhythm(1),
-            marginBottom: 0,
-          }}
-        >
-          {post.frontmatter.title}
-        </h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div class="markdown" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
+        <Center className="single-post">
+          <h1
+            style={{
+              marginTop: rhythm(1),
+              marginBottom: 0,
+            }}
+          >
+            {post.frontmatter.title}
+          </h1>
+          <p
+            style={{
+              ...scale(-1 / 5),
+              display: `block`,
+              marginBottom: rhythm(1),
+            }}
+          >
+            {post.frontmatter.date}
+          </p>
+          <div class="markdown" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Products products={post.frontmatter.products} />
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+            }}
+          />
+          <Bio />
+        </Center>
       </Layout>
     )
   }
@@ -64,6 +71,14 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        products {
+          image {
+            publicURL
+          }
+          name
+          price
+          sku
+        }
       }
     }
   }

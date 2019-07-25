@@ -85,7 +85,7 @@ class Layout extends React.Component {
               </p>
               <p>
                 More PWA goodness<br /> in the {` `}
-                <a href="https://snipcart.com/blog/pwa-ecommerce-example-gatsby">Blog Post</a> and {` `}
+                <a href="https://snipcart.com/blog/pwa-example-ecommerce-gatsby">Blog Post</a> and {` `}
                 <a href="https://github.com/snipcart/gatsby-pwa-demo">Github Repo</a>
               </p>
             </Center>

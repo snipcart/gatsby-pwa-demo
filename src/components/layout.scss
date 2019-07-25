@@ -13,6 +13,7 @@ body {
         url('../assets/zombies.svg') no-repeat bottom,
         linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #191919 100%),
         url('../assets/hero-background.jpg');
+    background-size: 100%;
 
     &:before, &:after {
         display: block;

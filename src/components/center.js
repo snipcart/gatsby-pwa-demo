@@ -3,9 +3,9 @@ import { rhythm } from "../utils/typography"
 
 class Center extends React.Component {
     render() {
-        const { children, style } = this.props
+        const { children, style, className } = this.props
         return (
-            <div style={{
+            <div className={className} style={{
                 ...style,
                 marginLeft: `auto`,
                 marginRight: `auto`,

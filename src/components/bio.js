@@ -4,6 +4,8 @@ import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 
+import profilePic from "../assets/profile-pic.svg"
+
 const Bio = (props) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -26,27 +28,17 @@ const Bio = (props) => {
   const { author } = data.site.siteMetadata
   return (
     <div className="bio">
-      {isMain ? null : <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 80,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />}
-      <p>
-        Survival blog edited by <strong>{author}</strong> {` `}
-        from <a href="https://snipcart.com">Snipcart</a> {` `}
-        who lived for two years in a remote and scary part of central Canada.
-      </p>
-      <p>
-        It's the guy to trust in case of a zombie apocalypse.
-      </p>
+      {isMain ? null : <img src={profilePic} />}
+      <div>
+        <p>
+          Survival blog edited by <strong>{author}</strong> {` `}
+          from <a href="https://snipcart.com">Snipcart</a> {` `}
+          who lived for two years in a remote and scary part of central Canada.
+        </p>
+        <p>
+          It's the guy to trust in case of a zombie apocalypse.
+        </p>
+      </div>
     </div>
   )
 }

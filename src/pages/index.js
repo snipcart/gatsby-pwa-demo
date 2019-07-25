@@ -35,25 +35,6 @@ class BlogIndex extends React.Component {
                   }}
                 />
                 </div>
-                <div className="products">
-                  {node.frontmatter.products.map(product =>{
-                    return (
-                      <article>
-                        <img style={{margin: 0}}
-                          src={product.image.publicURL}
-                          alt={product.name} />
-                        <button className="snipcart-add-item"
-                          data-item-id={product.sku}
-                          data-item-name={product.name}
-                          data-item-price={product.price}
-                          >${product.price}</button>
-                        <p className="product-name">
-                          {product.name}
-                        </p>
-                      </article>
-                    )
-                  })}
-                </div>
             </article>
           )
         })}
