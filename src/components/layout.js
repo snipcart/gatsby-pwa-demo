@@ -65,7 +65,6 @@ class Layout extends React.Component {
       } render={ data => (
       <div className="main">
         <Helmet>
-          <link rel="apple-touch-icon" sizes="180x180" href={data.logoImg.publicURL} />
           <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap" rel="stylesheet" />
         </Helmet>
         <Snipcart apiKey={data.site.siteMetadata.snipcartApiKey} />

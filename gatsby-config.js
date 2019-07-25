@@ -85,6 +85,7 @@ module.exports.plugins.push(
       background_color: `#FF453C`,
       theme_color: `#070707`,
       display: "standalone",
-      icon: `static/logos/logo.svg`,
+      icon: `content/assets/icon.png`,
+      legacy: true,
     },
   });
