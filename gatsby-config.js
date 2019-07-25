@@ -82,22 +82,9 @@ module.exports.plugins.push(
       name: siteMetadata.title,
       short_name: `PWA Survival`,
       start_url: `/`,
-      background_color: `#F5E35C`,
-      theme_color: `#bdbdbd`,
+      background_color: `#070707`,
+      theme_color: `#FF453C`,
       display: "standalone",
-      icon: `content/assets/gatsby-icon.png`,
+      icon: `static/logos/logo.svg`,
     },
-    // options: {
-    //   icons: [
-    //     {
-    //       src: "/logos/logo.png",
-    //       sizes: "192x192",
-    //       type: "image/png"
-    //     },
-    //     {
-    //       src: "/logos/logo.svg",
-    //       sizes: "72x72 96x96 128x128 256x256"
-    //     }
-    //   ]
-    // }
   });
