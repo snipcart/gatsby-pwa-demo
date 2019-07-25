@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 
-const Bio = () => {
+const Bio = (props) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
@@ -22,15 +22,11 @@ const Bio = () => {
     }
   `)
 
+  const { isMain } = props;
   const { author } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        alignItems: `center`,
-      }}
-    >
-      <Image
+    <div className="bio">
+      {isMain ? null : <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
@@ -42,11 +38,13 @@ const Bio = () => {
         imgStyle={{
           borderRadius: `50%`,
         }}
-      />
-      <p style={{margin:0}}>
+      />}
+      <p>
         Survival blog edited by <strong>{author}</strong> {` `}
         from <a href="https://snipcart.com">Snipcart</a> {` `}
         who lived for two years in a remote and scary part of central Canada.
+      </p>
+      <p>
         It's the guy to trust in case of a zombie apocalypse.
       </p>
     </div>

@@ -1,5 +1,59 @@
-html, body, #___gatsby, #___gatsby > div, .main {
-    height: 100%;
+@import "./colors.scss";
+
+body {
+    background-color: $dark-bg;
+    color: $text-main;
+    font-family: Lato;
+}
+
+.header {
+    padding: 128px 0 175px 0;
+
+    background:
+        url('../assets/zombies.svg') no-repeat bottom,
+        linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #191919 100%),
+        url('../assets/hero-background.jpg');
+
+    &:before, &:after {
+        display: block;
+        content: "";
+        margin: auto;
+        width: 68px;
+        border: 2px solid $primary-highlight;
+    }
+    h1, h3 {
+        font-family: "Centenario v0.1";
+        font-size: 136px;
+        line-height: 92.9%;
+        margin: 36px auto;
+        width: 726px;
+        /* or 126px */
+
+        text-align: center;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: 68px;
+    }
+
+    .bio {
+        width: 464px;
+        font-size: 24px;
+        line-height: 135.3%;
+        margin: 36px auto;
+        /* or 32px */
+
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+}
+
+.bio a {
+    color: $primary-highlight;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 main {
@@ -11,16 +65,32 @@ main {
     flex-direction: column;
 }
 
+h1, h2, h3, h4 {
+    color: $primary-highlight;
+    font-family: "Centenario v0.1";
+    margin: 0;
+}
+
+a {
+    color: $primary-highlight;
+    box-shadow: none;
+    text-decoration: none;
+    &:hover {
+        box-shadow: 0 1px 0 0 currentColor;
+    }
+}
+
 .markdown img {
     height: 175px;
     margin: 15px;
     float: left;
 }
 
-footer > div {
-    background-size: contain;
-}
+footer {
+    margin: 110px;
+    text-align: center;
 
-footer p {
-    margin: 15px;
+    & > div {
+        background-size: contain;
+    }
 }

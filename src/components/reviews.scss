@@ -1,0 +1,53 @@
+@import './colors.scss';
+
+.reviews {
+    margin-top: 80px;
+    padding: 85px 0;
+    background-color: $light-bg;
+
+    h2 {
+        font-size: 56px;
+        line-height: 92.9%;
+        /* identical to box height, or 52px */
+
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+
+        margin-bottom: 50px;
+
+        &:after {
+            display: block;
+            content: "";
+            margin-top: 26px;
+            width: 68px;
+            border: 2px solid $primary-highlight;
+        }
+    }
+
+    article {
+        display: flex;
+        flex: 1 1 100%;
+    }
+}
+
+.reviews-list {
+    display: flex;
+}
+
+.review-name {
+    font-family: 'Centenario v0.1';
+    font-size: 40px;
+    line-height: 92.9%;
+
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.star-dark, .star-light {
+    font-size: 20px;
+}
+
+.star-dark {
+    color: $primary-highlight;
+}

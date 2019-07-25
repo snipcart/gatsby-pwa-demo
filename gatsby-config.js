@@ -1,8 +1,11 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby PWA Survival Guide`,
     author: `Charles Ouellet`,
     description: `A simple blog demonstrating how Gatsby PWA can save you`,
+    snipcartApiKey: process.env.SNIPCART_API_KEY,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
   },
   plugins: [

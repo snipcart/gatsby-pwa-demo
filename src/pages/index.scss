@@ -1,0 +1,49 @@
+@import "../components/colors.scss";
+
+.post {
+    display: flex;
+
+    &-aside {
+        flex: 1 1 40%;
+    }
+}
+
+.post-title {
+    font-family: 'Centenario v0.1';
+    font-size: 56px;
+    line-height: 92.9%;
+
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.products {
+    flex: 1 1 60%;
+    display: flex;
+    text-align: center;
+
+    article {
+        flex: 1 1 100%;
+        margin: 15px;
+    }
+
+    .snipcart-add-item {
+        border: none;
+        background: none;
+        color: $primary-highlight;
+
+        font-family: 'Centenario v0.1';
+        font-size: 40px;
+        line-height: 92.9%;
+
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+    }
+    
+    .product-name {
+        font-size: 20px;
+        line-height: 135.3%;
+
+        letter-spacing: 0.03em;
+    }
+}

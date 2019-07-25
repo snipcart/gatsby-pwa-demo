@@ -1,3 +1,5 @@
+import "./index.scss"
+
 import React from "react"
 import { Link, graphql } from "gatsby"
 
@@ -5,69 +7,57 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Reviews from "../components/reviews"
+import Center from "../components/center";
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    let index = 0;
 
     return (
-      <Layout location={this.props.location} title={siteTitle} top={<Bio />}>
+      <Layout location={this.props.location} title={siteTitle} top={<Bio isMain={true} />}>
         <SEO title="All posts" />
+        <Center>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          const hasImage = !!node.frontmatter.cover
-          const odd = hasImage && index++ % 2 === 1
           return (
-            <div style={{display: `flex`, flexDirection: odd ? `row-reverse` : `row`}} key={node.fields.slug}>
-              <div style={{display: `flex`, flex: `1 1 100%`, margin: `10px`, alignItems: `center`}}>
-                <div>
-                <h3
-                  style={{margin: 0}}
-                >
+            <article className="post">
+              <div className="post-aside">
+                <small>{node.frontmatter.date}</small>
+                <h3 className="post-title">
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
-                <p style={{marginBottom: 0}}
-                  dangerouslySetInnerHTML={{
+                <p dangerouslySetInnerHTML={{
                     __html: node.excerpt,
                   }}
                 />
-                <div style={{display: `flex`, placeItems: `baseline`, textAlign: `center`}}>
+                </div>
+                <div className="products">
                   {node.frontmatter.products.map(product =>{
                     return (
-                      <article style={{flex:`1 1 100%`, margin: `10px`, display: `flex`, flexDirection: `column`}}>
+                      <article>
                         <img style={{margin: 0}}
                           src={product.image.publicURL}
                           alt={product.name} />
-                        <button style={{backgroundColor: `rgba(50, 66, 255, 0.3)`, border: `none`, margin: `10px`}}
-                          class="snipcart-add-item"
+                        <button className="snipcart-add-item"
                           data-item-id={product.sku}
                           data-item-name={product.name}
                           data-item-price={product.price}
                           >${product.price}</button>
-                        <p>
+                        <p className="product-name">
                           {product.name}
                         </p>
                       </article>
                     )
                   })}
                 </div>
-                </div>
-              </div>
-              {hasImage ? (
-              <div style={{flex: `1 1 100%`, margin: `10px`, display: `flex`, alignItems: `center`}}>
-                <img src={node.frontmatter.cover.publicURL} style={{margin:0, width: `100%`, maxHeight: `100%`}} />
-              </div>
-              ) : null}
-            </div>
+            </article>
           )
         })}
-        <hr />
+        </Center>
         <Reviews />
       </Layout>
     )

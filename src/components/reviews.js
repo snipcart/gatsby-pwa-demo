@@ -1,14 +1,15 @@
+import "./reviews.scss"
+
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Center from "./center";
 
 function stars(n, max) {
-    let stars = "";
+    let stars = [];
     for(var i=1; i<=max; i++) {
-        if(i<=n) {
-            stars += "★";
-        } else {
-            stars += "☆";
-        }
+      stars.push(
+        <span key={i} className={i<=n ? 'star-dark' : 'star-light'}>★{` `}</span>
+      )
     }
     return stars;
 }
@@ -40,32 +41,26 @@ const Reviews = () => {
   `)
 
   return (
-    <section
-      style={{
-        display: `flex`,
-      }}
-    >
-        {data.allMarkdownRemark.nodes.map((node) => {
-            return (
-                <article key={node.id} style={{flex: `1 1 100%`, margin: `10px`}}>
-                    <header style={{display: `flex`, alignItems: `center`}}>
-                        {node.frontmatter.picture
-                            ? <img style={{margin: 0, width: `80px`, height: `80px`, border: `4px solid black`, borderRadius: `100%`}}
-                                src={node.frontmatter.picture.publicURL} alt={node.frontmatter.name} />
-                            : null}
-                        <div style={{marginLeft: `20px`}}>
-                            <h3 style={{margin: 0}}>{node.frontmatter.name}</h3>
-                            <p>{stars(node.frontmatter.rating || 3.5, 5)}</p>
-                        </div>
-                    </header>
-                    <div style={{marginBottom: 0}}
-                        dangerouslySetInnerHTML={{
-                            __html: node.html,
-                    }}
-                    />
-                </article>
-            );
-        })}
+    <section className="reviews">
+      <Center>
+      <h2>Testimonials</h2>
+      <div className="reviews-list">
+        {data.allMarkdownRemark.nodes.map((node) => (
+            <article key={node.id}>
+              <img src={node.frontmatter.picture.publicURL} alt={node.frontmatter.name} />
+              <div>
+                <header>
+                  <h3 className="review-name">{node.frontmatter.name}</h3>
+                  <p style={{margin: 0}}>{stars(node.frontmatter.rating || 3.5, 5)}</p>
+                </header>
+                <div dangerouslySetInnerHTML={{
+                        __html: node.html,
+                }} />
+              </div>
+            </article>
+        ))}
+        </div>
+      </Center>
     </section>
   )
 }
